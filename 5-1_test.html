@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>5장 Form - 고승환</title>
+    <style>
+        body{
+            padding:20px;
+        }
+        input[type=text], input[type=password], input[type=tel], input[type=number]
+        {
+            width:30%;
+            height: 50px;
+            border: solid 1px green;
+            padding: 10px;
+            box-sizing: border-box;
+        }
+        label[for]{
+            color: red;
+            display: inline-block;
+            height: 100px;
+        }
+    </style>
+</head> 
+<body>
+    <h1>From 태그 실습</h1>
+    <form name="myForm" method="get" action="result.html">
+        <!-- 이름 입력 영역 -->
+        <div>
+            <label for="user_name">[이름] : </label>
+            <input type="text" nema="user_name" id="user_name" required>
+        </div>
+        <br><br>
+        <div>
+            <label for="user_pw">[비밀번호] : </label>
+            <input type="password" name="user_pw" id="user_pw" required>
+        </div>
+        <br><br>
+        <div>
+            <label for="user_mail">[e-mail] : </label>
+            <input type="email" name="user-mail" id="user_mail" placehoder="매일주소입력" required>
+        </div>
+        <br><br>
+        <div>
+            <input type="radio" name="grade" id="grade1" value="1학년">1학년
+            <input type="radio" name="grade" id="grade2" value="2학년" checked>2학년
+
+            <input type="radio" name="grade" id="grade3" value="3학년">
+            <lable for="grade3">3학년</lable>
+            <input type="radio" name="grade" id="grade4" value="4학년">4학년
+        </div>
+        <br><br>
+        <!--신청 과목 선택 영역-->
+        <div>
+            [신청 과목]:
+            <input type="checkbox" name="ck_java" id="ck_java" value="JAVA">
+            <label for="ck_java" >JAVA</label>
+            <input type="checkbox" name="ck_html" id="ck_html" value="HTML" checked>
+            <label for="ck_html" >HTML</label>
+            <input type="checkbox" name="ck_python" id="ck_python" value="PYTHON">
+            <label for="ck_python" >PYTHON</label>
+            <input type="checkbox" name="ck_ui/ix" id="ck_ui/ix" value="UI/UX">
+            <label for="ck_ui/ix" >UI/UX</label>
+
+
+        </div>
+        <br><br>
+        <!--학년 선택 영역-->
+        <label for="grade">[학년] : </label>
+        <select name="grade" id="grade">
+            <option value="1">1학년</option>
+            <option value="2">2학년</option>
+            <option value="3">3학년</option>
+            <option value="4" selected>4학년</option>
+        </select >
+
+        <br><br>
+        <div>
+            <label for="user_tel">[전화번호] : </label>
+            <input type="tel" name="user_tel" id="user_tel" placeholder="-기호를 빼주세요">
+        </div>
+        <div>
+            <label for="count">[인원수] : </label>
+            <input type="number" name="count" id="count">명            
+        </div>
+        <div>
+        <br><br>
+            <label for="date">[제출일] : </label>
+            <input type = "date" name="date" id="date"> 
+        </div>
+        <!--자기소개영역-->
+        <div>
+            <label for="user_info">[자기 소개] : </label>
+            <textarea name="user_info" id="user_info" cols="50" rows="10"></textarea>
+        </div>
+        <br><br>
+        <div>
+            <input type="button" value="네이버 연결" onclick="javascript:window.open('https://www.naver.com')">
+        </div>
+        <div>
+            <input type="submit" value="확인">
+            <input type="reset" value="취소">
+        </div>
+        
+
+
+    </form>
+</body>
