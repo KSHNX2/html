@@ -1,2 +1,2 @@
-# html/css
+# html/css 부산대학교 k-디지털 2기
 ## html 프로젝트 : 소개 패이지 작성
